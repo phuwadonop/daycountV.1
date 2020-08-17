@@ -7,8 +7,11 @@ int main() {
     int dayofmonth[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
     int dayinweek = 1, year, month, daycount = 0, n;
     char input[10];
+    int toyear;
     printf("Choose a day form Monday to Sunday : ");
     scanf("%[^\n]", input);
+    printf("Start 1901 to :  ");
+    scanf("%d",&toyear);
     toLowercase(input);
 
     if (asciivalue(input) == 660) n = 7;  //sunday
@@ -25,7 +28,7 @@ int main() {
             dayinweek = dayinweek % 7;
         }
     }
-    for (year = 1901; year <= 2000; year++) {
+    for (year = 1901; year <= toyear; year++) {
         if ((year % 400 == 0 && year % 100 == 0) || (year % 4 == 0)) {
             dayofmonth[1] = 29;
         }
