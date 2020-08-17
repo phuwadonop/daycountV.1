@@ -7,7 +7,7 @@ int main() {
     int dayofmonth[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
     int dayinweek = 1, year, month, daycount = 0, n;
     char input[10];
-
+    printf("Choose a day form Monday to Sunday : ");
     scanf("%[^\n]", input);
     toLowercase(input);
 
